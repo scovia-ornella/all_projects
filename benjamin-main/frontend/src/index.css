@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply bg-gray-50;
+}
+
+/* Modern Form Styles */
+.form-input,
+.form-select,
+.form-textarea {
+  @apply w-full rounded-lg border-gray-200 shadow-sm focus:border-black focus:ring focus:ring-black/10 py-3;
+}
+
+.form-checkbox,
+.form-radio {
+  @apply rounded border-gray-300 text-black focus:ring-black;
+}
+
+/* Button Styles */
+.btn {
+  @apply inline-flex items-center justify-center px-5 py-2.5 border border-transparent rounded-lg font-medium text-sm transition-all duration-200 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-black text-white hover:bg-gray-800 shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-white text-gray-800 border-gray-200 hover:bg-gray-50 shadow-sm;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700 shadow-md hover:shadow-lg;
+}
+
+.btn-icon {
+  @apply p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-black transition-colors;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden border border-gray-100;
+}
+
+.card-header {
+  @apply px-6 py-5 border-b border-gray-100 bg-white flex items-center justify-between;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+/* Table Styles */
+.table-modern {
+  @apply min-w-full;
+}
+
+.table-modern thead {
+  @apply bg-gray-50;
+}
+
+.table-modern th {
+  @apply px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider;
+}
+
+.table-modern tbody tr {
+  @apply hover:bg-gray-50 transition-colors;
+}
+
+.table-modern td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-700 border-b border-gray-100;
+}
+
+/* Top Navigation */
+.top-nav {
+  @apply bg-white shadow-md border-b border-gray-100 sticky top-0 z-50;
+}
+
+.top-nav-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.top-nav-content {
+  @apply flex items-center justify-between h-16;
+}
+
+.top-nav-logo {
+  @apply flex items-center text-black font-bold text-xl;
+}
+
+.top-nav-menu {
+  @apply flex space-x-1;
+}
+
+.top-nav-link {
+  @apply px-3 py-2 rounded-lg text-sm font-medium transition-colors;
+}
+
+.top-nav-link-active {
+  @apply bg-black text-white;
+}
+
+.top-nav-link-inactive {
+  @apply text-gray-600 hover:bg-gray-100 hover:text-black;
+}
+
+/* Dashboard Stats */
+.stat-card {
+  @apply bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow;
+}
+
+.stat-icon {
+  @apply p-3 rounded-lg text-white;
+}
+
+/* Page Container */
+.page-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+}
+
+/* Loader */
+.loader {
+  @apply flex flex-col items-center justify-center h-64;
+}
+
+.loader-spinner {
+  @apply animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-black mb-4;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  @apply fixed inset-0 bg-gray-800 z-50 lg:hidden;
+}
+
+.mobile-menu-container {
+  @apply fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl overflow-y-auto;
+}
+
+.mobile-menu-header {
+  @apply flex items-center justify-between px-4 py-5 border-b border-gray-100;
+}
+
+.mobile-menu-close {
+  @apply text-gray-500 hover:text-black;
+}
+
+.mobile-menu-items {
+  @apply px-2 pt-2 pb-3 space-y-1;
+}
+
+.mobile-menu-link {
+  @apply block px-3 py-2 rounded-md text-base font-medium;
+}
+
+.mobile-menu-link-active {
+  @apply bg-black text-white;
+}
+
+.mobile-menu-link-inactive {
+  @apply text-gray-600 hover:bg-gray-100 hover:text-black;
+}

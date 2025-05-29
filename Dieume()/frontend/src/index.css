@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: #faedcd;
+    color: #023e8a;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    background-color: #023e8a;
+    color: #faedcd;
+    @apply btn hover:opacity-90;
+  }
+
+  .btn-secondary {
+    background-color: #faedcd;
+    color: #023e8a;
+    border: 1px solid #023e8a;
+    @apply btn hover:opacity-90;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .input {
+    background-color: white;
+    border: 1px solid #023e8a;
+    color: #023e8a;
+    @apply flex h-10 w-full rounded-md px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .input::placeholder {
+    color: #6b7280;
+  }
+
+  .card {
+    background-color: white;
+    border: 1px solid #023e8a;
+    color: #023e8a;
+    @apply rounded-lg shadow-sm;
+  }
+
+  .table {
+    @apply w-full caption-bottom text-sm;
+  }
+
+  .table-header {
+    background-color: #023e8a;
+    color: #faedcd;
+    @apply border-b;
+  }
+
+  .table-row {
+    @apply border-b transition-colors;
+  }
+
+  .table-row:hover {
+    background-color: rgba(250, 237, 205, 0.5);
+  }
+
+  .table-cell {
+    @apply p-4 align-middle;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: white !important;
+  }
+
+  .table {
+    border-collapse: collapse;
+  }
+
+  .table-header {
+    background-color: #f3f4f6 !important;
+    color: black !important;
+  }
+
+  .table-cell {
+    border: 1px solid #d1d5db !important;
+    padding: 8px !important;
+  }
+
+  .table-row {
+    border: 1px solid #d1d5db !important;
+  }
+
+  @page {
+    margin: 1in;
+    size: A4;
+  }
+}
+
+/* Hide print-only elements by default */
+.print-only {
+  display: none;
+}
